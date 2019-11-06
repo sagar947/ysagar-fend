@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow|Ubuntu&display=swap');
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg-home {
+  background: url('/img/home_bg.jpg');
+  height: 550px;
+  justify-content: center;
+}
+
+.banner-text {
+  height: 500px;
+  display: table;
+}
+
+.banner-text .banner-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.banner-content h1 {
+  font-family: 'Lora';
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
+  font-size: 62px;
+  display: block;
+  margin-bottom: 0;
+  background: -webkit-linear-gradient(#ff9696, #ffe89e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-content h3 {
+  font-family: 'Lora';
+  color: #fff;
+}
