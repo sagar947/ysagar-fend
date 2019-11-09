@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow|Ubuntu&display=swap');
 
+.navbar.bg-transparent {
+  background: rgb(244,91,50);
+  background: linear-gradient(90deg, rgba(244,91,50,1) 0%, rgba(193,66,60,1) 100%);
+  box-shadow: 0 0 5px 0px black, 0px 0px 5px 0px #65d460;
+}
+
 .parallax::after {
   content: " ";
   position: absolute;
@@ -13,9 +19,12 @@
 }
 
 .bg-home {
-  background: url('/img/home_bg.jpg');
-  height: 550px;
+  background: url('/img/home_bg_2.jpg');
+  height: 600px;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -60px;
 }
 
 .banner-text {
@@ -44,3 +53,99 @@
   font-family: 'Lora';
   color: #fff;
 }
+
+.featured_post_content {
+  height: 480px;
+  display: table;
+}
+
+.featured_post_content .featured_post_title {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.featured_post_title h3 {
+  font-size: 48px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#080b1c, #3b202a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.featured_post_title p {
+  font-family: 'Lora';
+  font-weight: 400;
+}
+
+.nav-link {
+  margin: 0px 50px 0px 0px;
+}
+
+.nav-link:hover {
+  background: rgba(244, 91, 50, 0.4);
+}
+
+.btn-danger {
+  background: rgba(244,91,50,1) !important;
+  border: 1px solid rgba(193,66,60,1) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1.0) !important;
+}
+
+/* Intro Section Begin */
+
+.intro-text {
+  padding: 50px 0px 0px 0px;
+}
+
+.intro-text h4 {
+  font-family: 'Lora';
+}
+
+.card-title {
+  font-family: 'Lora'
+}
+
+.intro-text .intro-text-row {
+  padding: 30px 0px;
+}
+
+.intro-text-row .intro-text-col {
+  margin-bottom: 10px;
+}
+
+.intro-text .card {
+  padding: 10px;
+  border: unset !important;
+}
+
+/* Intro Section End */
+
+/* Skills Section Begin */
+
+.skills-text {
+  padding: 0px 0px 50px 0px;
+}
+
+.skills-text h3, .skills-text h4 {
+  font-family: 'Lora';
+}
+
+.skills-text p, .skills-text ul {
+  font-family: 'Times New Roman';
+}
+
+.skills-text .row {
+  margin-top: 20px;
+}
+
+hr.custom-style { 
+  border: 0;
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0)
+}
+
+/* Skills Section end */

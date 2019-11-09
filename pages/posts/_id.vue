@@ -10,31 +10,23 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   head () {
     return {
-      title: this.post._yoast_wpseo_title
+      title: this.post._yoast_wpseo_title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.post._yoast_wpseo_metadesc },
+        { hid: 'og:image', name: 'og:image', content: this.post._embedded['wp:featuredmedia'][0].source_url }
+      ]
     }
   },
-  data () {
-    return {
-      post: {},
-      error: []
+  computed: {
+    post () {
+      return this.$store.state.posts.post
     }
   },
-  asyncData ({ params }) {
-    return axios.get('https://api.ysagar.in/wp-json/wp/v2/posts/54')
-      .then((response) => {
-        return {
-          post: response.data
-        }
-      })
-      .catch((error) => {
-        return {
-          error
-        }
-      })
+  async fetch ({ store, params }) {
+    await store.dispatch('posts/getPostBySlug', params.id)
   }
 }
 </script>

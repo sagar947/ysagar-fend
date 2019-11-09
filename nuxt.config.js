@@ -13,7 +13,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/css/main.css' }
+      { rel: 'stylesheet', href: '/css/main.css' },
+      { rel: 'stylesheet', href: '/css/hover.css' }
     ]
   },
   /*
@@ -30,6 +31,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/date-filter.js' }
   ],
   /*
   ** Nuxt.js dev-modules
